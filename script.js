@@ -6,7 +6,6 @@ console.log(li);
 const text = [];
 
 textarea.addEventListener("input", function () {
-  textarea.style.height = "100%";
   textarea.style.height = textarea.scrollHeight + "px";
 });
 
