@@ -1,30 +1,33 @@
-const textarea = document.querySelector("textarea");
-const li = document.querySelectorAll("li");
-
-console.log(li);
+const editor = document.getElementById("editor");
+const btn = document.querySelectorAll("button");
+const li = document.querySelectorAll(".dropdown-item");
 
 const text = [];
 
-textarea.addEventListener("input", function () {
-  textarea.style.height = textarea.scrollHeight + "px";
+editor.addEventListener("input", () => {
+  editor.style.height = "auto";
+  editor.style.height = editor.scrollHeight + "px";
 });
 
-li.forEach((element) => {
+btn.forEach((element) => {
   element.addEventListener("click", function () {
-    console.log(textarea.value);
-    if (getSelectText() !== "" || getSelectText() !== " ") {
-      const textBold = getSelectText();
-      textBold.style.fontWeight = "bold";
-      textarea.value =
-        textarea.value.substring(0, textarea.selectionStart) +
-        `${getSelectText()}` +
-        textarea.value.substring(textarea.selectionEnd);
+    console.log(element);
+    let cmd = element.dataset["comando"];
+    if (cmd === "createLink") {
+      let url = window.prompt("Enter the link here: ", "http://");
+      document.execCommand(cmd, false, url);
+    } else if (cmd === "insertImage") {
+      console.log("insertImage");
+      document.execCommand(cmd, false, "https://picsum.photos/200/300");
+    } else {
+      document.execCommand(cmd, false, null);
     }
   });
 });
 
-getSelectText = () => {
-  var start = textarea.selectionStart;
-  var finish = textarea.selectionEnd;
-  return textarea.value.substring(start, finish);
-};
+li.forEach((element) => {
+  element.addEventListener("click", function () {
+    document.execCommand("fontName", false, element.innerText);
+    console.log(element.innerText);
+  });
+});

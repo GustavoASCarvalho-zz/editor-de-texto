@@ -1,33 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
 
 body {
-  background-color: #212529;
+  background-color: #ffffff;
+  overflow: visible;
+}
+
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 3rem;
 }
 
 main {
-  background-color: white;
-  height: 300px;
+  background-color: #212529;
   width: 800px;
-  border-radius: 10px;
-}
-
-textarea {
-  font-family: "Recursive", sans-serif;
-  font-size: 20px;
-  width: 100%;
-  height: 100%;
-  resize: none;
-  overflow: hidden;
-  border: none;
-}
-
-textarea:focus,
-input:focus {
-  outline: 0;
-}
-
-*:focus {
-  outline: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 li {
@@ -38,6 +26,23 @@ i {
   font-size: 20px;
 }
 
-hr {
-  margin: 0;
+#editor {
+  font-family: "Recursive", sans-serif;
+  font-size: 20px;
+  width: 800px;
+  min-height: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: #212529 0px 0px 10px;
+}
+
+#editor:focus {
+  outline: 0;
+}
+
+.dropdown-menu {
+  min-width: none;
 }

@@ -19,36 +19,154 @@
   </head>
   <body>
     <div class="d-flex flex-column justify-content-center align-items-center">
+      <h1 class="mt-5">Text Editor</h1>
       <main class="mt-5">
         <ul class="list-group list-group-horizontal justify-content-start m-2">
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-card-heading"></i>
+          <li>
+            <div class="dropdown">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-toggle="popover"
+                data-trigger="hover"
+                title="Fonts"
+              >
+                <i class="bi bi-fonts"></i>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li><a class="dropdown-item" href="#">Arial</a></li>
+                <li><a class="dropdown-item" href="#">Verdana</a></li>
+                <li><a class="dropdown-item" href="#">Helvetica</a></li>
+                <li><a class="dropdown-item" href="#">Tahoma</a></li>
+                <li><a class="dropdown-item" href="#">Trebuchet MS</a></li>
+                <li><a class="dropdown-item" href="#">Times New Roman</a></li>
+                <li><a class="dropdown-item" href="#">Georgia</a></li>
+              </ul>
+            </div>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-type-bold"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="bold"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Bold"
+            >
+              <i class="bi bi-type-bold"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-type-italic"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="italic"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Italic"
+            >
+              <i class="bi bi-type-italic"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-code"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="underline"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Underline"
+            >
+              <i class="bi bi-type-underline"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-list-ul"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="justifyCenter"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="justify Center"
+            >
+              <i class="bi bi-text-center"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-type-underline"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="justifyLeft"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Justify Left"
+            >
+              <i class="bi bi-text-left"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-blockquote-left"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="justifyRight"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Justify Right"
+            >
+              <i class="bi bi-text-right"></i>
+            </button>
           </li>
-          <li class="px-3 btn btn-dark mx-1">
-            <i class="bi bi-link"></i>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="createLink"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Link"
+            >
+              <i class="bi bi-link"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="insertImage"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="insert a random 100x100 image"
+            >
+              <i class="bi bi-image-fill"></i>
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 btn btn-dark mx-1"
+              type="button"
+              data-comando="undo"
+              data-bs-toggle="popover"
+              data-trigger="hover"
+              title="Undo"
+            >
+              <i class="bi bi-arrow-counterclockwise"></i>
+            </button>
           </li>
         </ul>
-        <hr />
-        <textarea name="text" id="text" class="px-3 pt-3"></textarea>
       </main>
+      <div
+        id="editor"
+        contenteditable="true"
+        class="mb-5"
+        spellcheck="false"
+      ></div>
+      <p>made by <a href="https://github.com/GustavoASCarvalho">Gustavo</a></p>
     </div>
 
     <script
