@@ -1,4 +1,5 @@
 <h1 align="center">Simple Text Editor</h1>
+<img align="center" src="/image/image.PNG"/>
 
 * Html
 * Css
