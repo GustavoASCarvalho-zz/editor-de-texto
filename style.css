@@ -43,6 +43,11 @@ i {
   outline: 0;
 }
 
-.dropdown-menu {
-  min-width: none;
+#li-color div {
+  width: 18px;
+  height: 18px;
+}
+
+#ul-color {
+  min-width: 0px;
 }
