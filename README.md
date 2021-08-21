@@ -1,4 +1,5 @@
 <h1 align="center">Simple Text Editor</h1>
+<img alt="rifa" src="/Image.png" width="100%" />
 
 * Html
 * Css
